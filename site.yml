@@ -1,0 +1,12 @@
+---
+# This playbook will print a debug message on the host.
+- name: Playbook that prints a debug message
+  hosts: all
+  connection: local
+  vars:
+    person: Bernie
+
+  tasks:
+    - ansible.builtin.debug:
+        msg: Henlo there {{ person }}!
+
